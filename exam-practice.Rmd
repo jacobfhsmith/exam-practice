@@ -1,0 +1,87 @@
+---
+title: "Ggplot2 and dplyr review for exam"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+# Main Idea
+
+- I am providing this to help you review for the exam.
+
+# Notes
+
+First, load the `tidyverse`,`viridis`, and `fivethirtyeight` packages.
+
+```{r packages, warning = FALSE, message = FALSE}
+library(tidyverse)
+library(viridis)
+library(fivethirtyeight)
+```
+
+## Endorsements Data
+
+I am naming an object here so that we can look at the data in the viewer. This data is about presidential primary endorsements from 1980 to 2012.
+
+```{r load-data, message=FALSE}
+endorsements <- endorsements
+```
+
+### Some ggplot-specific practice
+
+#### Numeric Variables
+
+Please make a histogram for the number of endorsement points. Remember to include informative labels.
+
+```{r histogram}
+
+```
+
+### Categorical Variables
+
+Please make a bar plot of the number of candidates by party in the dataset and include informative labels.
+
+```{r bar-plot}
+
+```
+
+**Segmented bar plots** can be used to visualize two categorical variables. Let's say you were interested in how many candidates ran for each party by year. 
+
+Now please make a segmented bar plot using `viridis` colors for the number of candidates who ran in each party by year.
+
+```{r segmented-bar-plot}
+
+```
+
+## Dplyr and ggplot practice problems
+
+1) Please make a bar plot of the number of **Democratic** candidates by year.
+
+```{r combine, warning=FALSE}
+
+```
+
+2) How many candidates raise a lot of money, a medium amount of money, and a small amount of money. Make a segmented barplot showing the number of candidates in each party who raise 1) under 1 million, 2) between 1 and 2 million, and 3) above 2 million. You will need to use a dplyr command first before making the plot. Hint: the command `case_when` might be useful here. [This page](https://www.sharpsightlabs.com/blog/case-when-r/) may be useful here.
+
+```{r combine-2, warning=FALSE}
+
+```
+
+**Remember that you put the pipeline operator between the lines for dplyr and a + between lines for ggplot.**
+
+### Additional Resources
+
+### GGplot2
+- https://ggplot2.tidyverse.org/
+- https://raw.githubusercontent.com/rstudio/cheatsheets/master/data-visualization-2.1.pdf
+- http://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html
+- https://medium.com/bbc-visual-and-data-journalism/how-the-bbc-visual-and-data-journalism-team-works-with-graphics-in-r-ed0b35693535
+- https://ggplot2-book.org/
+- https://ggplot2.tidyverse.org/reference/geom_histogram.html
+- https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
+- https://github.com/GraphicsPrinciples/CheatSheet/blob/master/NVSCheatSheet.pdf
+
+## Dplyr
+
+- https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+- https://style.tidyverse.org/
